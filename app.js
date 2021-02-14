@@ -37,7 +37,6 @@ const getImages = (query) => {
     fetch(`https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`)
         .then(response => response.json())
         .then(data => {
-            console.log(data)
             if (data.total === 0) {
                 loader.classList.add('d-none')
                 showError()
